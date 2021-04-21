@@ -10,7 +10,6 @@ let pic = [
 {photo: 'kepek/k09.jpg', title: 'Ez itt a cím9', description: 'Ez itt a szöveg.9'},
 {photo: 'kepek/k10.jpg', title: 'Ez itt a cím10', description: 'Ez itt a szöveg.10'}]
 
-
 //függvény, ami egy keretbe betölti az aktuális thumbnail képet és a feliratát
 let loadThumbnails = aktualis => {
     $('.also').append(
@@ -18,7 +17,7 @@ let loadThumbnails = aktualis => {
             <p class="nem-latszik" id="p${aktualis}">${pic[aktualis].title}</p>
             <img class="kiskep-nincskatt" id="k${aktualis}" data-kiskep="${aktualis}" src="${pic[aktualis].photo}">
         </div>`
-    )
+        )
 }
 //minden thumbnail képet betölt a tömbből
 let thumbn = 0
@@ -26,8 +25,6 @@ pic.forEach(() => {
     loadThumbnails(thumbn)
     thumbn++
 })
-
-
 //a függvény, ami betölti az aktuális nagy képet és a hozzá tartozó szövegeket
 let loadPhoto = (photoNumber) => {
     $('#nagykep').attr('src', pic[photoNumber].photo);
@@ -37,13 +34,11 @@ let loadPhoto = (photoNumber) => {
 //betölti a 0. képet
 let currentPhoto = 0
 loadPhoto(0)
-
 //ha a thumbnailre mutatok, megjelenik felette a felirat
 $('div.also>div.belso>img').hover((event) => {
     var szam = $(event.target).attr('data-kiskep')
     $(`p#p${szam}`).toggleClass("latszik")
 })
-
 //thumbnailre kattintva az megnő és a szegélye fehér lesz (a többi visszaáll az eredetire),
 //felülre betölti a megfelelő nagy képet és szöveget
 $('.belso>img').click( (event) => {
@@ -52,8 +47,6 @@ $('.belso>img').click( (event) => {
     var szam = $(event.target).attr('data-kiskep')
     loadPhoto(szam)
 })
-
-
 //jobb nyílra kattintva a felső nagy kép vált a következő képre, thumbnail vele tart, a szöveg is
 $('#jobb-nyil').click( () => {
     currentPhoto++
@@ -62,7 +55,6 @@ $('#jobb-nyil').click( () => {
     $('.belso>img').attr('class', 'kiskep-nincskatt')
     $(`.belso>img#k${currentPhoto}`).toggleClass("kiskep-katt")
    })
-
 //bal nyílra kattintva a felső nagy kép vált a következő képre, thumbnail vele tart, a szöveg is
 $('#bal-nyil').click( () => {
     if (currentPhoto === 0) {

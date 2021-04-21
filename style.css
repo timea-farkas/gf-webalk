@@ -2,26 +2,19 @@
     margin: 0;
     padding: 0;
 }
-
-
-
-
 .keret {
     background-image: radial-gradient(#f9f2ec, #e6e2de, #96897d);
     height: 85vh;
     padding-top: 15vh;
 }
-
 #felso {
     display: flex;
     width: max-content;
     justify-content: center;
     position: relative;
     box-shadow: 10px 10px 20px;
-    margin: auto;
-    
+    margin: auto;    
 }
-
 .nyil {
     display: flex;
     align-items: center;
@@ -30,13 +23,10 @@
     justify-content: center;
     background-color: white;
 }
-
 #bal-nyil, #jobb-nyil {
     width: 50px;
     height: 50px;
 }
-
-
 .gray-container {
     width: 1004px;
     height: 25%;
@@ -46,15 +36,11 @@
     color: cornsilk;
     padding: 10px;
 }
-
-
-
 .also {
     display: flex;
     justify-content: center;
     padding: 40px 0;    
 }
-
 .belso {
     width: 115px;
     height: 100px;
@@ -62,9 +48,6 @@
     margin: -50px 5px 0;
     padding: 0;
 }
-
-
-
 div.also>div.belso>img.kiskep-nincskatt {
     height: 50px;
     box-shadow: 5px 5px 10px;
@@ -75,20 +58,14 @@ div.also>div.belso>img.kiskep-nincskatt {
     transform: scale(1);
     transition: 1s;
 }
-
 div.also>div.belso>img.kiskep-katt {
     border: 5px solid white;
     transform: scale(1.2);
     transition: 1s;
 }
-
-
-
-
 div.also>div.belso>p.nem-latszik {
     display: none;
 }
-
 div.also>div.belso>p.latszik {
     display: block;
     padding: 5px;
