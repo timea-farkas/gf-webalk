@@ -55,7 +55,7 @@ $('#jobb-nyil').click( () => {
     $('.belso>img').attr('class', 'kiskep-nincskatt')
     $(`.belso>img#k${currentPhoto}`).toggleClass("kiskep-katt")
    })
-//bal nyílra kattintva a felső nagy kép vált a következő képre, thumbnail vele tart, a szöveg is
+//bal nyílra kattintva a felső nagy kép vált az előző képre, thumbnail vele tart, a szöveg is
 $('#bal-nyil').click( () => {
     if (currentPhoto === 0) {
         currentPhoto = pic.length-1
